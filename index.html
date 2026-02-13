@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin Watzinger</title>
+    <meta name="description" content="Martin Watzinger - Professor of Economics at the University of Münster.">
+    <meta property="og:title" content="Martin Watzinger">
+    <meta property="og:description" content="Professor of Economics at University of Münster.">
+    <meta property="og:image" content="vwl-profs-neu_orig.jpg">
+    <meta property="og:type" content="website">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.7;
+            font-weight: 400;
+            color: #222;
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            color: #1a4b8c;
+            text-decoration: none;
+            border-bottom: 1px solid #1a4b8c;
+            transition: color 0.15s, border-color 0.15s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 48px 24px 24px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        header h1 a {
+            color: inherit;
+            border: none;
+            text-decoration: none;
+        }
+
+
+        /* Main content */
+        .wrap {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        /* Hero */
+        .hero {
+            display: flex;
+            gap: 48px;
+            align-items: flex-start;
+            padding: 24px 0 48px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .hero-photo {
+            flex: 0 0 300px;
+            height: 340px;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 80% top;
+            display: block;
+        }
+
+        .hero-bio {
+            flex: 1;
+            padding-top: 4px;
+        }
+
+        .hero-bio p {
+            margin-bottom: 14px;
+        }
+
+        /* Sections */
+        section {
+            padding: 48px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        section h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 28px;
+        }
+
+        /* Publication entries */
+        .pub {
+            margin-bottom: 28px;
+        }
+
+        .pub:last-child {
+            margin-bottom: 0;
+        }
+
+        .pub-title {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .pub-title a {
+            color: #1a4b8c;
+            font-weight: 600;
+        }
+
+        .pub-authors {
+            margin-top: 3px;
+            font-size: 17px;
+            color: #555;
+        }
+
+        .pub-venue {
+            font-style: italic;
+            color: #555;
+            font-size: 17px;
+        }
+
+        .pub-award {
+            display: inline-block;
+            margin-top: 5px;
+            font-weight: 600;
+            font-size: 16px;
+            color: #1a4b8c;
+        }
+
+        .pub-award a {
+            color: #1a4b8c;
+            font-weight: 600;
+        }
+
+        .pub-links {
+            margin-top: 5px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .pub-links a {
+            color: #1a4b8c;
+        }
+
+        .abstract-toggle {
+            font-size: 16px;
+            color: #1a4b8c;
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 0;
+            font-family: inherit;
+            font-weight: 500;
+            border-bottom: 1px solid #1a4b8c;
+            transition: color 0.15s, border-color 0.15s;
+        }
+
+        .abstract-toggle:hover {
+            opacity: 0.8;
+        }
+
+        .abstract {
+            display: none;
+            margin-top: 12px;
+            padding: 16px 20px;
+            background: #f5f5f5;
+            border-left: 3px solid #ddd;
+            font-size: 16px;
+            line-height: 1.65;
+            color: #555;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .abstract.open {
+            display: block;
+        }
+
+        /* Contact */
+        .contact p {
+            margin-bottom: 12px;
+        }
+
+
+
+        /* Mobile */
+        @media (max-width: 700px) {
+            body {
+                font-size: 19px;
+            }
+
+            header {
+                padding: 36px 20px 0;
+            }
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            .wrap {
+                padding: 0 20px;
+            }
+
+            .hero {
+                flex-direction: column;
+                gap: 28px;
+                padding: 36px 0 36px;
+            }
+
+            .hero-photo {
+                flex: none;
+                width: 100%;
+                max-width: 400px;
+                height: 300px;
+            }
+
+            section {
+                padding: 36px 0;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="#">Martin Watzinger</a></h1>
+    </header>
+
+    <div class="wrap">
+
+        <div class="hero">
+            <div class="hero-photo">
+                <img src="vwl-profs-neu_orig.jpg" alt="Martin Watzinger">
+            </div>
+            <div class="hero-bio">
+                <p>
+                    I am a Professor of Economics at the
+                    <a href="https://www.wiwi.uni-muenster.de/inno/" target="_blank">University of M&uuml;nster</a>,
+                    a Director at the
+                    <a href="https://www.wiwi.uni-muenster.de/mep/en" target="_blank">M&uuml;nster Center for Economic
+                        Policy</a>,
+                    and a Research Professor at the
+                    <a href="https://www.reach-euregio.de/" target="_blank">REACH EUREGIO Start-up Center</a>.
+                    I am also a research affiliate at
+                    <a href="https://cepr.org/" target="_blank">CEPR</a> and
+                    <a href="https://www.cesifo.org/" target="_blank">CESifo</a>.
+                </p>
+                <p>
+                    My research focuses on the relation of competition and innovation.
+                </p>
+                <p>
+                    <a href="20260108_CV Watzinger.pdf" target="_blank">Here is my CV.</a>
+                </p>
+            </div>
+        </div>
+
+        <section id="papers">
+            <h2>Working Papers</h2>
+
+            <div class="pub">
+                <div class="pub-title"><a href="watzinger_schnitzer_breakup_of_bell.pdf" target="_blank">The Breakup of
+                        Bell and its Impact on Innovation</a></div>
+                <div class="pub-authors">with <a href="https://www.monika-schnitzer.com/research.html"
+                        target="_blank">Monika Schnitzer</a></div>
+                <div class="pub-links">
+                    <a href="https://cepr.org/publications/dp17635" target="_blank">CEPR Discussion Paper No. 17635</a>
+                    &ensp;<button class="abstract-toggle" onclick="toggleAbstract(this)">[Abstract]</button>
+                </div>
+                <div class="abstract">We analyze the effects of the 1984 breakup of the Bell System on the rate,
+                    diversity, and direction of US innovation. In the antitrust case leading to the breakup, AT&amp;T,
+                    the holding company of the Bell System, was accused of using exclusionary practices against
+                    competitors. The breakup was intended to end these practices. After the breakup, the scale and
+                    diversity of telecommunications innovation increased. Total patenting by US inventors related to
+                    telecommunications increased by 19%, driven by companies unrelated to the Bell System. Patenting by
+                    Bell's successor companies decreased, but not the number of top inventions.</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Selected Publications</h2>
+
+            <div class="pub">
+                <div class="pub-title"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/smj.3613"
+                        target="_blank">Standing on the Shoulders of Science</a></div>
+                <div class="pub-authors">with <a href="https://www.hbs.edu/faculty/Pages/profile.aspx?facId=885680"
+                        target="_blank">Joshua L. Krieger</a> and <a href="http://monika-schnitzer.com/"
+                        target="_blank">Monika Schnitzer</a></div>
+                <div class="pub-venue">Strategic Management Journal, 45(9): 1670&ndash;1695, 2024</div>
+                <div class="pub-links">
+                    <button class="abstract-toggle" onclick="toggleAbstract(this)">[Abstract]</button>
+                </div>
+                <div class="abstract">We investigate how firms generate value by building on scientific discoveries.
+                    Analyzing U.S. patents, we show that patent value decreases with distance-to-science. We identify a
+                    science premium: patents that directly build on scientific publications are 5.0%&ndash;18.3% more
+                    valuable than those not directly based on science. This premium can be even larger, ranging from
+                    4.0%&ndash;42.3%, when accounting for firms' varying R&amp;D strategies and their relative
+                    advantages.</div>
+            </div>
+
+            <div class="pub">
+                <div class="pub-title"><a
+                        href="http://www.martin-watzinger.com/uploads/4/9/4/1/49415675/bw_stimulusinvestments_web.pdf"
+                        target="_blank">The Employment Effects of Countercyclical Public Investments</a></div>
+                <div class="pub-authors">with <a href="https://lukasbuchheim.net/" target="_blank">Lukas Buchheim</a>
+                </div>
+                <div class="pub-venue">American Economic Journal: Economic Policy, 15(1): 154&ndash;173, 2023</div>
+                <div class="pub-links">
+                    Coverage: <a
+                        href="https://www.oekonomenstimme.org/artikel/2017/03/sollten-infrastrukturinvestitionen-teil-eines-konjunkturprogramms-sein/"
+                        target="_blank">&Ouml;konomenstimme</a>
+                    &ensp;<button class="abstract-toggle" onclick="toggleAbstract(this)">[Abstract]</button>
+                </div>
+                <div class="abstract">We study the employment effects of countercyclical public investments using the
+                    German stimulus program during the Great Recession. Exploiting variation in the program's allocation
+                    across counties, we find that the stimulus created jobs in the construction sector and reduced
+                    unemployment. The effects materialized quickly and were concentrated in regions with slack labor
+                    markets.</div>
+            </div>
+
+            <div class="pub">
+                <div class="pub-title"><a
+                        href="https://direct.mit.edu/rest/article-abstract/104/2/276/97671/Measuring-the-Spillovers-of-Venture-Capital"
+                        target="_blank">Measuring the Spillovers of Venture Capital</a></div>
+                <div class="pub-authors">with <a href="http://monika-schnitzer.com/" target="_blank">Monika
+                        Schnitzer</a></div>
+                <div class="pub-venue">Review of Economics and Statistics, 104(2): 276&ndash;292, 2022</div>
+                <div class="pub-links">
+                    Coverage: <a href="https://voxeu.org/article/measuring-spillovers-venture-capital"
+                        target="_blank">VoxEU</a>
+                    &ensp;<button class="abstract-toggle" onclick="toggleAbstract(this)">[Abstract]</button>
+                </div>
+                <div class="abstract">We measure the spillovers of venture capital by exploiting the introduction of the
+                    Small Business Innovation Research program in the US in 1982 as a natural experiment. We find that
+                    additional VC-backed startups in a technology class increase the number of patents of incumbent
+                    firms in the same technology class. The spillovers are driven by knowledge spillovers rather than
+                    market demand effects.</div>
+            </div>
+
+            <div class="pub">
+                <div class="pub-title"><a href="https://www.aeaweb.org/articles?id=10.1257/pol.20180636"
+                        target="_blank">Disclosure and Subsequent Innovation: Evidence from the Patent Depository
+                        Library Program</a></div>
+                <div class="pub-authors">with <a href="https://questromworld.bu.edu/jefffurman/" target="_blank">Jeffrey
+                        L. Furman</a> and <a href="https://markusnagler.mystrikingly.com/" target="_blank">Markus
+                        Nagler</a></div>
+                <div class="pub-venue">American Economic Journal: Economic Policy, 13(4): 239&ndash;270, 2021</div>
+                <div class="pub-links">
+                    Coverage: <a href="https://www.aeaweb.org/research/charts/disclosure-innovation-patent-library"
+                        target="_blank">AEA Chart</a>,
+                    <a href="https://www.brookings.edu/blog/up-front/2018/06/07/hutchins-roundup-benefits-from-productivity-growth-information-in-patent-disclosures-and-more/"
+                        target="_blank">Brookings</a>,
+                    <a href="https://voxeu.org/article/how-patent-disclosure-fuels-subsequent-innovation"
+                        target="_blank">VoxEU</a>,
+                    <a href="https://mattsclancy.substack.com/p/free-knowledge-and-innovation" target="_blank">New
+                        Things Under the Sun</a>
+                    &ensp;<button class="abstract-toggle" onclick="toggleAbstract(this)">[Abstract]</button>
+                </div>
+                <div class="abstract">We examine how the disclosure of technical knowledge in patents affects subsequent
+                    innovation. We exploit the staggered opening of Patent and Trademark Depository Libraries (PTDLs)
+                    across US states, which reduced the cost of accessing patent documents. The opening of a PTDL
+                    increases local patenting by 17% on average, with effects concentrated in technology classes with
+                    more prior art available through the library.</div>
+            </div>
+
+            <div class="pub">
+                <div class="pub-title"><a href="https://www.aeaweb.org/articles?id=10.1257/pol.20190086"
+                        target="_blank">How Antitrust Enforcement Can Spur Innovation: Bell Labs and the 1956 Consent
+                        Decree</a></div>
+                <div class="pub-authors">with Thomas A. Fackler, <a href="https://markusnagler.mystrikingly.com/"
+                        target="_blank">Markus Nagler</a>, and <a href="http://monika-schnitzer.com/"
+                        target="_blank">Monika Schnitzer</a></div>
+                <div class="pub-venue">American Economic Journal: Economic Policy, 12(4): 328&ndash;359, 2020</div>
+                <div class="pub-award"><a href="https://www.aeaweb.org/news/2021-aej-best-papers" target="_blank">AEJ:
+                        Policy Best Paper Award 2021</a></div>
+                <div class="pub-links">
+                    Coverage: <a href="https://www.aeaweb.org/research/charts/innovation-bell-labs-consent-decree"
+                        target="_blank">AEA Chart</a>,
+                    <a href="https://voxeu.org/article/how-antitrust-enforcement-can-spur-innovation"
+                        target="_blank">VoxEU</a>,
+                    <a href="https://lt.org/publication/does-compulsory-licensing-work-effective-antitrust-tool"
+                        target="_blank">Latest Thinking</a>,
+                    <a href="https://www.nytimes.com/2019/05/09/opinion/sunday/chris-hughes-facebook-zuckerberg.html"
+                        target="_blank">New York Times</a>,
+                    <a href="https://www.wired.com/story/tech-antitrust-break-up-andrew-yang/" target="_blank">Wired</a>
+                    &ensp;<button class="abstract-toggle" onclick="toggleAbstract(this)">[Abstract]</button>
+                </div>
+                <div class="abstract">We analyze the effects of one of the most important antitrust rulings in US
+                    history: the 1956 Consent Decree against the Bell System. The decree required Bell to license all
+                    its existing patents royalty-free. We find that this led to a substantial increase in innovation by
+                    firms outside the Bell System in fields where Bell had been active. The number of patents increased
+                    and new innovators entered the field. Our results suggest that compulsory licensing can be an
+                    effective tool to promote innovation in markets with a dominant firm.</div>
+            </div>
+
+            <div class="pub">
+                <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0304393218303209"
+                        target="_blank">Job Creation in Tight and Slack Labor Markets</a></div>
+                <div class="pub-authors">with <a href="https://lukasbuchheim.net/" target="_blank">Lukas Buchheim</a>
+                    and Matthias Wilhelm</div>
+                <div class="pub-venue">Journal of Monetary Economics, 114: 126&ndash;143, 2020</div>
+                <div class="pub-links">
+                    <button class="abstract-toggle" onclick="toggleAbstract(this)">[Abstract]</button>
+                </div>
+                <div class="abstract">We study how labor market tightness affects the ability of firms to create jobs.
+                    Using plant-level data from Germany, we find that firms in tight labor markets create fewer jobs in
+                    response to positive demand shocks than firms in slack labor markets. This heterogeneity matters for
+                    the aggregate effects of demand-side policies.</div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>
+                University of M&uuml;nster<br>
+                School of Business and Economics<br>
+                Am Stadtgraben 9<br>
+                48143 M&uuml;nster, Germany
+            </p>
+            <p>
+                <a href="mailto:Martin.Watzinger@wiwi.uni-muenster.de">Martin.Watzinger@wiwi.uni-muenster.de</a>
+            </p>
+        </section>
+
+    </div>
+
+
+
+    <script>
+        function toggleAbstract(btn) {
+            var abs = btn.closest('.pub').querySelector('.abstract');
+            abs.classList.toggle('open');
+            btn.textContent = abs.classList.contains('open') ? '[Hide Abstract]' : '[Abstract]';
+        }
+    </script>
+
+</body>
+
+</html>
